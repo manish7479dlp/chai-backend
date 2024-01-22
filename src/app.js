@@ -10,6 +10,9 @@ app.use(cors({
 }))
 
 app.use(express.json({limit: "16kb"}))
+
+// express.urlencoded: This middleware is used to parse incoming requests with URL-encoded payloads. URL-encoded data is typically sent from HTML forms using the application/x-www-form-urlencoded media type.
+
 app.use(express.urlencoded({extended: true, limit: "16kb"}))
 app.use(express.static("public"))
 app.use(cookieParser())
